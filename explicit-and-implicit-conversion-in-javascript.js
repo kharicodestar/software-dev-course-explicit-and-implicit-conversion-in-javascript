@@ -17,16 +17,56 @@ Include at least one edge case, like NaN, undefined, or null .
 Use console.log() to clearly show the before-and-after type conversions.
 
 */
+1.
+Explicit
+let num = 3;
+console.log(typeof str);
+(This is an explicit type conversion where the number is 
+being converted to a String.)
 
+Implicit
+console.log("5"-2);
+(This is an implicit type conversion because the code is using
+  subtraction to convert a string to number.)
 
-let result = "5" - 2;
-console.log("The result is: " + result);
+2.
+Explicit
 
-let isValid = Boolean("false");
-if (isValid) {
-    console.log("This is valid!");
+let num = 0;
+console.log(Boolean(num));
+let text = "This is valid";
+console.log(Boolean(text));
+(This is an explicit type conversion where a number is 
+  being converted into a Boolean.)
+
+Implicit
+if("This is valid"){
+   console.log("This is truthy");
 }
 
-let age = "25";
-let totalAge = age + 5;
-console.log("Total Age: " + totalAge);
+if (null){
+  console.log("This is falsy.");
+}
+(This is an example of an Implicit type conversion demonstating
+  a truthy and falsey outcome.)
+
+
+
+3.
+ 
+Explicit
+
+let str = "25";
+let totalAge = Number(str);
+console.log(totalAge);
+(This is an explict type conversion where a string is 
+being converted into a number.)
+
+Implicit
+
+let age= 25;
+
+console.log('You are ${age} years old.');
+
+This is an example of an Implicit conversion demonstrating
+turning non-string values to strings. 
